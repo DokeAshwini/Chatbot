@@ -1,0 +1,560 @@
+{
+      "intents": [
+            {
+                  "intent": "Greeting",
+                  "text": [
+                        "Hi",
+                        "Hi there",
+                        "Hola",
+                        "Hello",
+                        "Hello there",
+                        "Hya",
+                        "Hya there",
+                        "hey there"
+                  ],
+                  "responses": [
+                        "Hi, How can I help?",
+                        "Hi, how can I help you?",
+                        "Hello, what can I do for you?",
+                        "Hola, how can I help you?"
+                  ],
+                  "extension":  {
+                        "function": "",
+                        "entities": false,
+                        "responses": []
+                  },
+                  "context":  {
+                        "in": "",
+                        "out": "GreetingUserRequest",
+                        "clear": false
+                  },
+                  "entityType": "NA",
+                  "entities": []
+            },
+            {
+                  "intent": "GreetingResponse",
+                  "text": [
+                        "My name is Adam",
+                        "This is Adam",
+                        "I am Adam",
+                        "It is Adam",
+                        "My username is Bella",
+                        "This is Bella",
+                        "I am Bella",
+                        "It is Bella"
+                  ],
+                  "responses": [
+                        "Great! How can I help?",
+                        "Good! How can I help you?",
+                        "Cool! What can I do for you?",
+                        "OK! How can I help you?",
+                        "OK! What can I do for you?"
+                  ],
+                  "extension":  {
+                        "function": "extensions.gHumans.updateHuman",
+                        "entities": true,
+                        "responses": []
+                  },
+                  "context":  {
+                        "in": "GreetingUserRequest",
+                        "out": "",
+                        "clear": true
+                  },
+                  "entityType": "NA",
+                  "entities": []
+            },
+            {
+                  "intent": "CheckMyShift",
+                  "text": [
+                        "I want to check my shifts",
+                        "shifts i booked",
+                        "list of shifts I booked",
+                        "I need to look up my shifts",
+                        "I want to look over my shifts",
+                        "list of the shifts I scheduled",
+                        "Date and time of the shifts i booked",
+                        "Location of my shift",
+                        "How much is Tesco paying for my shift?",
+                        "How much is Sainsbury paying for my shift?",
+                        "How much is ALDI paying for my shift?",
+                        "How much is ASDA paying for my shift?",
+                        "How much is Poundland paying for my shift?",
+                        "How much am I being paid by Poundland for my shift?",
+                        "How much am I being paid by RoyalMail for my shift?",
+                        "What will ALDI pay me for my?",
+                        "What will Tesco pay me for my "
+                  ],
+                  "responses": [
+                        "checkmylist"
+                  ],
+                  "extension":  {
+                        "function": "",
+                        "entities": false,
+                        "responses": []
+                  },
+                  "context":  {
+                        "in": "",
+                        "out": "CheckMyShiftUserRequest",
+                        "clear": false
+                  },
+                  "entityType": "NA",
+                  "entities": []
+            },
+            {
+                  "intent": "CancelShift",
+                  "text": [
+                        "I want to cancel my shift",
+                        "Please cancel my shift",
+                        "Please revoke my shift",
+                        "I would like to skip my shift",
+                        "My shift has to be canceled"
+                  ],
+                  "responses": [
+                        "cancelshift"
+                  ],
+                  "extension":  {
+                        "function": "",
+                        "entities": false,
+                        "responses": []
+                  },
+                  "context":  {
+                        "in": "",
+                        "out": "CancelShiftUserRequest",
+                        "clear": false
+                  },
+                  "entityType": "NA",
+                  "entities": []
+            },
+            {
+                  "intent": "AvailableShiftList",
+                  "text": [
+                        "I want to book a shift",
+                        "List of available shifts",
+                        "shifts available",
+                        "available shifts",
+                        "Can you please help me with the available shifts?",
+                        "Can you please help me with the stores that have shifts available",
+                        "help me with the shifts details please",
+                        "I want to check available shifts",
+                        "check available shifts"
+                  ],
+                  "responses": [
+                        "AvailableShiftList"
+                  ],
+                  "extension":  {
+                        "function": "",
+                        "entities": false,
+                        "responses": []
+                  },
+                  "context":  {
+                        "in": "",
+                        "out": "ShiftListRequest",
+                        "clear": false
+                  },
+                  "entityType": "NA",
+                  "entities": []
+            },
+            {
+                  "intent": "Book",
+                  "text": [
+                        "I want to book 10 am shift for Sainsbury",
+                        "Book me the shift for Tesco for 10 am",
+                        "I want to reserve a 10 am shift at ALDI.",
+                        "I want to book 10 am shift for ASDA",
+                        "Please book me in for 10 am at ASDA",
+                        "For poundland, I want to schedule a 10 am shift.",
+                        "Book me the shift for RoyalMail for 10 am",
+                        "Please book me in for 10 am at RoyalMail",
+                        "I want to reserve a 10 am shift at RoyalMail.",
+                        "Book a shift",
+                        "i want to book a shift",
+                        "help me in booking a part time shift",
+                        "i want to book more part time shifts",
+                        "book me in for part time shifts"
+                  ],
+                  "responses": [
+                        "bookshift"
+                  ],
+                  "extension":  {
+                        "function": "",
+                        "entities": false,
+                        "responses": []
+                  },
+                  "context":  {
+                        "in": "",
+                        "out": "BookUserRequest",
+                        "clear": true
+                  },
+                  "entityType": "NA",
+                  "entities": []
+            },
+            {
+                  "intent": "ShiftsAvailable",
+                  "text": [
+                        "Is there any shift available at Tesco?",
+                        "By any chance, is the shift available at Sainsbury?",
+                        "Hey there, any shifts available at Sainsbury?",
+                        "Does Sainsbury have any open shifts?",
+                        "Does ASDA have any vacant shifts?",
+                        "At ASDA, are there any openings for shifts?",
+                        "Any shift available at RoyalMail?",
+                        "Is there any shift available at Poundland?"
+                  ],
+                  "responses": [
+                        "Yes, There are shifts available",
+                        "Yes, There are",
+                        "Yup, there are a few, book fast! as they are getting booked rapidly!",
+                        "Yes, there are a few, book fast! as they are getting booked rapidly!",
+                        "Yes, there are open shifts",
+                        "Yes, there are open shifts at the shop.",
+                        "Yes, there are openings for shifts.",
+                        "The shop does indeed have openings for.",
+                        "There are, in fact",
+                        "There are, indeed.",
+                        "Yes, there are a few; act quickly! since they are quickly being booked!",
+                        "Yes, there are a few, so reserve soon! since they are soon being booked!",
+                        "Yes, there are a few, but act quickly! as reservations are filling up quickly!"
+                  ],
+                  "extension":  {
+                        "function": "",
+                        "entities": false,
+                        "responses": []
+                  },
+                  "context":  {
+                        "in": "",
+                        "out": "ShiftsAvailableUserRequest",
+                        "clear": false
+                  },
+                  "entityType": "NA",
+                  "entities": []
+            },
+            {
+                  "intent": "Yes",
+                  "text": [
+                        "yes, you are right",
+                        "Yup",
+                        "Thats right",
+                        "Yeah",
+                        "Correct",
+                        "I agree",
+                        "Ok",
+                        "Fine"
+                  ],
+                  "responses": [
+                        "Oops, something went wrong, can you please come again",
+                        "Can you please elaborate more",
+                        "Thats great!"
+                  ],
+                  "extension":  {
+                        "function": "",
+                        "entities": false,
+                        "responses": []
+                  },
+                  "context":  {
+                        "in": "",
+                        "out": "YesUserRequest",
+                        "clear": false
+                  },
+                  "entityType": "NA",
+                  "entities": []
+            },
+            {
+                  "intent": "No",
+                  "text": [
+                        "No",
+                        "No, Let me come again later",
+                        "Nah",
+                        "Naah",
+                        "No thanks",
+                        "Nope",
+                        "Don't",
+                        "Do not book me"
+                  ],
+                  "responses": [
+                        "which shift you want to book for?",
+                        "Can you please help me with the shift details you want to book for? like the venue, date and time you want to book for."
+                  ],
+                  "extension":  {
+                        "function": "",
+                        "entities": false,
+                        "responses": []
+                  },
+                  "context":  {
+                        "in": "",
+                        "out": "NoUserRequest",
+                        "clear": false
+                  },
+                  "entityType": "NA",
+                  "entities": []
+            },
+            {
+                  "intent": "Quit",
+                  "text": [
+                        "Quit please",
+                        "Exit chat",
+                        "quit the chat",
+                        "exit the chat",
+                        "I want to discontiue the chat",
+                        "discontinue chat please",
+                        "exit please",
+                        "please exit",
+                        "kindly exit"
+                  ],
+                  "responses": [
+                        "Quit"
+                  ],
+                  "extension":  {
+                        "function": "",
+                        "entities": false,
+                        "responses": []
+                  },
+                  "context":  {
+                        "in": "",
+                        "out": "QuitUserRequest",
+                        "clear": false
+                  },
+                  "entityType": "NA",
+                  "entities": []
+            },
+            {
+                  "intent": "CourtesyGreeting",
+                  "text": [
+                        "How are you?",
+                        "Hi how are you?",
+                        "Hello how are you?",
+                        "Hola how are you?",
+                        "How are you doing?",
+                        "Hope you are doing well?",
+                        "Hello hope you are doing well?"
+                  ],
+                  "responses": [
+                        "Hello, I am great!",
+                        "Hello, I am great thanks!",
+                        "Hello, I am good thank you",
+                        "Hi, I am great",
+                        "Hi, I am great thanks!",
+                        "Hi, I am good thank you!"
+                  ],
+                  "extension":  {
+                        "function": "",
+                        "entities": false,
+                        "responses": []
+                  },
+                  "context":  {
+                        "in": "",
+                        "out": "CourtesyGreetingUserRequest",
+                        "clear": true
+                  },
+                  "entityType": "NA",
+                  "entities": []
+            },
+            {
+                  "intent": "CourtesyGreetingResponse",
+                  "text": [
+                        "Good thanks! My username is Adam",
+                        "Good thanks! This is Adam",
+                        "Good thanks! I am Adam",
+                        "Good thanks! It is Adam",
+                        "Great thanks! My username is Bella",
+                        "Great thanks! This is Bella",
+                        "Great thanks! I am Bella",
+                        "Great thanks! It is Bella"
+                  ],
+                  "responses": [
+                        "Great! How can I help?",
+                        "Good! How can I help you?",
+                        "Cool! What can I do for you?",
+                        "OK! How can I help you?",
+                        "OK! What can I do for you?"
+                  ],
+                  "extension":  {
+                        "function": "extensions.gHumans.updateHuman",
+                        "entities": true,
+                        "responses": []
+                  },
+                  "context":  {
+                        "in": "CourtesyGreetingResponseUserRequest",
+                        "out": "",
+                        "clear": true
+                  },
+                  "entityType": "NA",
+                  "entities": []
+            },
+            {
+                  "intent": "RealNameQuery", 
+                  "text": [
+                        "What is your real name?",
+                        "What's your real name?",
+                        "Tell me your real name?",
+                        "Your real name?"
+                  ],
+                  "responses": [
+                        "My name is Jane.",
+                        "Jane.",
+                        "My real name is Jane." 
+                  ],
+                  "extension":  {
+                        "function": "",
+                        "entities": false,
+                        "responses": []
+                  },
+                  "context":  {
+                        "in": "",
+                        "out": "",
+                        "clear": false
+                  },
+                  "entityType": "NA",
+                  "entities": []
+            },
+            { 
+                  "intent": "TimeQuery",
+                  "text": [
+                        "What is the time?",
+                        "What's the time?",
+                        "Do you know what time it is?",
+                        "Do you know the time?",
+                        "Can you tell me the time?",
+                        "Tell me what time it is?",
+                        "Time"
+                  ],
+                  "responses": [
+                        "Please note the Shift time is from 10:00 am to 2:00 pm.",
+                        "You should be aware that the shift runs from 10:00 am to 2:00 pm.",
+                        "For your information, the shift runs from 10:00 am to 2:00 pm.",
+                        "The shift is from 10:00 am to 2:00 pm, so please take notice of that."
+                  ],
+                  "extension":  {
+                        "function": "extensions.gTime.getTime",
+                        "entities": false,
+                        "responses": []
+                  },
+                  "context":  {
+                        "in": "",
+                        "out": "",
+                        "clear": false
+                  },
+                  "entityType": "NA",
+                  "entities": []
+            },
+            {
+                  "intent": "Thanks",
+                  "text": [
+                        "OK thank you",
+                        "OK thanks",
+                        "OK",
+                        "Thanks",
+                        "Thank you",
+                        "That's helpful"
+                  ],
+                  "responses": [
+                        "No problem!",
+                        "Happy to help!",
+                        "Any time!",
+                        "My pleasure"
+                  ],
+                  "extension":  {
+                        "function": "",
+                        "entities": false,
+                        "responses": []
+                  },
+                  "context":  {
+                        "in": "",
+                        "out": "",
+                        "clear": false
+                  },
+                  "entityType": "NA",
+                  "entities": []
+            },
+            {
+                  "intent": "NotTalking2U",
+                  "text": [
+                        "I am not talking to you",
+                        "I was not talking to you",
+                        "Not talking to you",
+                        "Wasn't for you",
+                        "Wasn't meant for you",
+                        "Wasn't communicating to you",
+                        "Wasn't speaking to you"
+                  ],
+                  "responses": [
+                        "OK",
+                        "No problem",
+                        "Oops"
+                  ],
+                  "extension":  {
+                        "function": "",
+                        "entities": false,
+                        "responses": []
+                  },
+                  "context":  {
+                        "in": "",
+                        "out": "",
+                        "clear": false
+                  },
+                  "entityType": "NA",
+                  "entities": []
+            },
+            {
+                  "intent": "Shutup",
+                  "text": [
+                        "Be quiet",
+                        "Shut up",
+                        "Stop talking",
+                        "Enough talking",
+                        "Quiet",
+                        "Shhh"
+                  ],
+                  "responses": [
+                        "I am sorry to disturb you",
+                        "Fine, sorry to disturb you",
+                        "OK, sorry to disturb you"
+                  ],
+                  "extension":  {
+                        "function": "",
+                        "entities": false,
+                        "responses": []
+                  },
+                  "context":  {
+                        "in": "",
+                        "out": "",
+                        "clear": false
+                  },
+                  "entityType": "NA",
+                  "entities": []
+            },
+            {
+                  "intent": "GoodBye",
+                  "text": [
+                        "Bye",
+                        "Adios",
+                        "See you later",
+                        "Goodbye",
+                        "Thanks, bye",
+                        "Thank you, bye",
+                        "Thank you, goodbye",
+                        "Thanks goodbye",
+                        "Thanks good bye"
+                  ],
+                  "responses": [
+                        "See you later",
+                        "Have a nice day",
+                        "Bye! Come back again soon.",
+                        "No problem, goodbye",
+                        "Not a problem! Have a nice day",
+                        "Bye! Come back again soon"
+                  ],
+                  "extension":  {
+                        "function": "",
+                        "entities": false,
+                        "responses": []
+                  },
+                  "context":  {
+                        "in": "",
+                        "out": "",
+                        "clear": false
+                  },
+                  "entityType": "NA",
+                  "entities": []
+            }
+      ]
+}
